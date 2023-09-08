@@ -5,7 +5,7 @@ import combat.CompteurDeTour;
 import combat.AffichageEcran;
 
 public class JeuGladiateurs {
-
+//Ceci est un gentil commentaire
     public static void main(String[] args) {
 
     // **************************************************************************
