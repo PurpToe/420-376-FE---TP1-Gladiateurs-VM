@@ -2,37 +2,77 @@ package personnages;
 
 public class Personnage {
 
-    // **************************************************************************
-    // **************************************************************************
-    // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Attributs">
     // TODO : Mettre vos attributs ici
-    // </editor-fold>
+    String nom;
+    int pointsDeVie;
+    int valeurMaxAttaque;
+    int valeurDefense;
+    int initiative;
 
-    // **************************************************************************
-    // **************************************************************************
-    // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
     public Personnage(String nom, int attaqueMax, int defense, int pvs, int ini) {
         // TODO : Constructeur AVEC paramètres
+        this.nom = nom;
+        this.pointsDeVie = pvs;
+        this.valeurMaxAttaque = attaqueMax;
+        this.valeurDefense = defense;
+        this.initiative = ini;
+
+        Personnage perso1 = new Personnage("Bob le malchanceux", 15, 15, 70, 15);
+        Personnage perso2 = new Personnage("Igor l'empaleur", 25, 5, 100, 30);
+
     }
 
     public Personnage() {
         // TODO : Constructeur SANS paramètres qui initialise à ZÉRO ou à ""
+        this.nom = "";
+        this.pointsDeVie = 0;
+        this.valeurMaxAttaque = 0;
+        this.valeurDefense = 0;
+        this.initiative = 0;
     }
-    // </editor-fold>
 
-    // **************************************************************************
-    // **************************************************************************
-    // **************************************************************************
-    // <editor-fold defaultstate="collapsed" desc="Getters et setters">
     // TODO : Les getters
-    // TODO : Les setters
-    // </editor-fold>
+    public String getNom() {
+        return this.nom;
+    }
 
-    // **************************************************************************
-    // **************************************************************************
-    // **************************************************************************
+    public int getPointsDeVie() {
+        return this.pointsDeVie;
+    }
+
+    public int getValeurMaxAttaque() {
+        return this.valeurMaxAttaque;
+    }
+
+    public int getValeurDefense() {
+        return this.valeurDefense;
+    }
+
+    public int getInitiative() {
+        return this.initiative;
+    }
+
+// TODO : Les setters
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPointsDeVie(int pointsDeVie) {
+        this.pointsDeVie = pointsDeVie;
+    }
+
+    public void setValeurMaxAttaque(int valeurMaxAttaque) {
+        this.valeurMaxAttaque = valeurMaxAttaque;
+    }
+
+    public void setValeurDefense(int valeurDefense) {
+        this.valeurDefense = valeurDefense;
+    }
+
+    public void setInitiative(int initiative) {
+        this.initiative = initiative;
+    }
+
     // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void afficherInfosPersonnage() {
         // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
