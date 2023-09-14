@@ -16,10 +16,6 @@ public class Personnage {
         this.valeurMaxAttaque = attaqueMax;
         this.valeurDefense = defense;
         this.initiative = ini;
-
-        Personnage perso1 = new Personnage("Bob le malchanceux", 15, 15, 70, 15);
-        Personnage perso2 = new Personnage("Igor l'empaleur", 25, 5, 100, 30);
-
     }
 
     public Personnage() {
@@ -73,9 +69,19 @@ public class Personnage {
         this.initiative = initiative;
     }
 
-    // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void afficherInfosPersonnage() {
         // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
+        System.out.println(this.nom);
+        System.out.println("Attaque : " + this.valeurMaxAttaque);
+        System.out.println("Defense : " + this.valeurDefense);
+        System.out.println("Points de vie : " + this.pointsDeVie);
+        System.out.println("Initiative : " + this.initiative);
+        if (this.pointsDeVie > 0) {
+            System.out.println("Statut : Vivant");
+        }
+        else {
+            System.out.println("Statut : Mort");
+        }
     }
 
     private int attaqueCalcul() {

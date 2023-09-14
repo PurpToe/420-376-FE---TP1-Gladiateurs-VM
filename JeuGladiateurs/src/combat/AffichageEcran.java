@@ -18,6 +18,7 @@ public class AffichageEcran {
 
     public void afficherSeparateurInfosPerso() {
         // TODO : Afficher un retour à la ligne, suivi du séparateur "infos personnages", tel que montré dans l'énoncé
+        System.out.println();
     }
 
     public void afficheVictoire(Personnage personnage1, Personnage personnage2) {
