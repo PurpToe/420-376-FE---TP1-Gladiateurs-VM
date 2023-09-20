@@ -27,11 +27,7 @@ public class JeuGladiateurs {
         // TODO : Afficher le message du début du combat
         affichage.afficherDebutCombat();
         
-        
-        // **************************************************************************
-        // **************************************************************************
-        // **************************************************************************
-        // <editor-fold defaultstate="collapsed" desc="Mécanique de combat">
+
         // TODO : La boucle contenant les étapes du combat
         // TODO : Après la boucle, afficher le résultat du combat
         // </editor-fold>
