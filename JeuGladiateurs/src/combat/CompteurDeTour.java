@@ -31,5 +31,4 @@ public class CompteurDeTour {
         System.out.println("TOUR ACTUEL: "+ this.cptrTour);
         System.out.println("---------------");
     }
-
 }

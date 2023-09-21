@@ -88,8 +88,8 @@ public class Personnage {
     private int attaqueCalcul() {
         // TODO : Retourner la valeur de l'attaque du personnage.
         // Cette valeur est trouvée aléatoirement et doit se situer entre ZÉRO et valeurMaxAttaque.
-        Random rand = new Random();
-        return rand.nextInt(this.valeurMaxAttaque + 1);
+        Random rand1 = new Random();
+        return rand1.nextInt(this.valeurMaxAttaque + 1);
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
@@ -108,7 +108,6 @@ public class Personnage {
     }
     personnageCible.setPointsDeVie(pointsDeVieCible);
 
-    System.out.println();
     System.out.println(this.nom + " attaque " + personnageCible.getNom() + " avec une force de frappe de " + forceDeFrappe);
     System.out.println(personnageCible.getNom() + " a une defense de " + valeurDefenseCible);
     System.out.println("Les dommages sont donc de: " + dommages);
@@ -117,6 +116,8 @@ public class Personnage {
 
     public void setNewInitiativeRandom() {
         // TODO : Modifier de façon aléatoire la valeur INI du personnage.
+        Random rand2 = new Random();
+        this.initiative = rand2.nextInt(101);
     }
     // </editor-fold>
 }

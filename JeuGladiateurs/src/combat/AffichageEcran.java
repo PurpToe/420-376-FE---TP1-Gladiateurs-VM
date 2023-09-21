@@ -14,6 +14,7 @@ public class AffichageEcran {
     
     public void afficherSeparateurDeTour() {
         // TODO : Afficher un retour à la ligne, suivi d'une ligne d'astérisques, tel que montré dans l'énoncé
+            System.out.println();
     }
 
     public void afficherSeparateurInfosPerso() {
