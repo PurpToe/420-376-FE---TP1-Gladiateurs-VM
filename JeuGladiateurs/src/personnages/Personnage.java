@@ -83,6 +83,7 @@ public class Personnage {
         else {
             System.out.println("Statut : Mort");
         }
+        System.out.println("");
     }
 
     private int attaqueCalcul() {
@@ -107,7 +108,8 @@ public class Personnage {
         pointsDeVieCible = 0;
     }
     personnageCible.setPointsDeVie(pointsDeVieCible);
-
+    
+    System.out.println("");
     System.out.println(this.nom + " attaque " + personnageCible.getNom() + " avec une force de frappe de " + forceDeFrappe);
     System.out.println(personnageCible.getNom() + " a une defense de " + valeurDefenseCible);
     System.out.println("Les dommages sont donc de: " + dommages);
@@ -119,5 +121,4 @@ public class Personnage {
         Random rand2 = new Random();
         this.initiative = rand2.nextInt(101);
     }
-    // </editor-fold>
 }
