@@ -28,7 +28,6 @@ public class JeuGladiateurs {
         affichage.afficherDebutCombat();
         
 
-
         // TODO : La boucle contenant les étapes du combat
         // TODO : Après la boucle, afficher le résultat du combat
         // </editor-fold>
