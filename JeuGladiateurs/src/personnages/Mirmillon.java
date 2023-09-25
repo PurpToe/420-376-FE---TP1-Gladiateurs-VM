@@ -4,22 +4,34 @@
  */
 package personnages;
 
-public class Mirmillon extends Personnage{
-    
+import java.util.Random;
+
+public class Mirmillon extends Personnage {
+
     protected String classe;
-    
-    public Mirmillon(String classe, String nom, int attaqueMax, int defense, int pvs, int ini){
+
+    public Mirmillon(String classe, String nom, int attaqueMax, int defense, int pvs, int ini) {
         super(nom, attaqueMax, defense, pvs, ini);
     }
-    
-    public Mirmillon(){
+
+    public Mirmillon() {
         this.classe = "";
     }
-    
-    public void setClasse(String classe){
+
+    public void setClasse(String classe) {
         this.classe = classe;
     }
-    
-    
-    
+
+    public void afficherInfosPersonnage() {
+        super.afficherInfosPersonnage();
+        System.out.println("Classe :" + this.classe);
+    }
+
+    private int attaqueCalcul() {
+        // TODO : Retourner la valeur de l'attaque du personnage.
+        // Cette valeur est trouvée aléatoirement et doit se situer entre ZÉRO et valeurMaxAttaque.
+        Random rand1 = new Random();
+        return rand1.nextInt(this.valeurMaxAttaque + 1);
+    }
+
 }
