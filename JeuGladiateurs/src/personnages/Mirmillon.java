@@ -34,4 +34,41 @@ public class Mirmillon extends Personnage {
         return rand1.nextInt(this.valeurMaxAttaque + 1);
     }
 
+    public void frapperPersonnage(Personnage personnageCible) {
+        // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
+        int forceDeFrappe = attaqueCalcul();
+        int valeurDefenseCible = personnageCible.getValeurDefense();
+        int dommages = forceDeFrappe - valeurDefenseCible;
+
+        if (dommages < 0) {
+            dommages = 0;
+        }
+
+        int pointsDeVieCible = personnageCible.getPointsDeVie() - dommages;
+        if (pointsDeVieCible < 0) {
+            pointsDeVieCible = 0;
+        }
+        personnageCible.setPointsDeVie(pointsDeVieCible);
+
+        System.out.println("");
+        System.out.println(this.nom + " attaque " + personnageCible.getNom() + " avec une force de frappe de " + forceDeFrappe);
+        System.out.println(personnageCible.getNom() + " a une defense de " + valeurDefenseCible);
+        System.out.println("Les dommages sont donc de: " + dommages);
+
+        if (dommages < 0) {
+            dommages = 0;
+        }
+
+        if (pointsDeVieCible < 0) {
+            pointsDeVieCible = 0;
+        }
+        personnageCible.setPointsDeVie(pointsDeVieCible);
+
+        System.out.println("");
+        System.out.println(this.nom + " attaque " + personnageCible.getNom() + " avec une force de frappe de " + forceDeFrappe);
+        System.out.println(personnageCible.getNom() + " a une defense de " + valeurDefenseCible);
+        System.out.println("Les dommages sont donc de: " + dommages);
+        // sur l'attaque, tel que montré dans l'énoncé.
+    }
+
 }
