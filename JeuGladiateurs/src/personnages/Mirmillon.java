@@ -71,4 +71,10 @@ public class Mirmillon extends Personnage {
         // sur l'attaque, tel que montré dans l'énoncé.
     }
 
+    public void setNewInitiativeRandom() {
+        // TODO : Modifier de façon aléatoire la valeur INI du personnage.
+        Random rand2 = new Random();
+        this.initiative = rand2.nextInt(31);
+    }
+
 }
