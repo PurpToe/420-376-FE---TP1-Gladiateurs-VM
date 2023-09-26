@@ -1,6 +1,5 @@
 package personnages;
 
-
 import java.util.Random;
 
 public class Rétiaire extends Personnage {
@@ -52,12 +51,14 @@ public class Rétiaire extends Personnage {
             if (reussiFilet) {
                 System.out.println("Son filet attrape Bob le malchanceux et il l’empale sauvagement avec sa lance");
                 personnageCible.setPointsDeVie(0);
+
             } else {
                 System.out.println("Le filet n'atteint pas sa cible");
                 Filet = false;
             }
         } else {
-            System.out.println(this.nom + "ramasse son filet en profite pour attaquer.");
+            System.out.println(this.nom + " ramasse son filet en profite pour attaquer.");
+
             if (dommages < 0) {
                 dommages = 0;
             }
@@ -74,6 +75,5 @@ public class Rétiaire extends Personnage {
             System.out.println("Les dommages sont donc de: " + dommages);
         }
 
-        // sur l'attaque, tel que montré dans l'énoncé.
     }
 }

@@ -72,6 +72,7 @@ public class Personnage {
 
     public void afficherInfosPersonnage() {
         // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
+        System.out.println("");
         System.out.println(this.nom);
         System.out.println("Attaque : " + this.valeurMaxAttaque);
         System.out.println("Defense : " + this.valeurDefense);
