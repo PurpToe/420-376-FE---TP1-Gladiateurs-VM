@@ -1,4 +1,3 @@
-
 package personnages;
 
 import java.util.Random;
@@ -19,7 +18,7 @@ public class Mirmillon extends Personnage {
     public void setClasse(String classe) {
         this.classe = classe;
     }
-    
+
     @Override
     public void afficherInfosPersonnage() {
         super.afficherInfosPersonnage();
@@ -46,33 +45,49 @@ public class Mirmillon extends Personnage {
 
         int pointsDeVieCible = personnageCible.getPointsDeVie() - dommages;
         if (pointsDeVieCible < 0) {
-            pointsDeVieCible = 0;
+
+            personnageCible.setPointsDeVie(pointsDeVieCible);
+
+            System.out.println("");
+            System.out.println(this.nom + " attaque " + personnageCible.getNom() + " avec une force de frappe de " + forceDeFrappe);
+            System.out.println(personnageCible.getNom() + " a une defense de " + valeurDefenseCible);
+            System.out.println("Les dommages sont donc de: " + dommages);
+            System.out.println(this.nom + " decapite " + personnageCible.getNom() + "!");
+        } else {
+            if (dommages < 0) {
+                dommages = 0;
+            }
+            
+            if (pointsDeVieCible < 0) {
+                pointsDeVieCible = 0;
+            }
+            personnageCible.setPointsDeVie(pointsDeVieCible);
+
+            System.out.println("");
+            System.out.println(this.nom + " attaque " + personnageCible.getNom() + " avec une force de frappe de " + forceDeFrappe);
+            System.out.println(personnageCible.getNom() + " a une defense de " + valeurDefenseCible);
+            System.out.println("Les dommages sont donc de: " + dommages);
+            
+            if (dommages < 0) {
+                dommages = 0;
+            }
+            
+            if (pointsDeVieCible < 0) {
+                pointsDeVieCible = 0;
+            }
+            personnageCible.setPointsDeVie(pointsDeVieCible);
+
+            System.out.println("");
+            System.out.println(this.nom + " attaque " + personnageCible.getNom() + " avec une force de frappe de " + forceDeFrappe);
+            System.out.println(personnageCible.getNom() + " a une defense de " + valeurDefenseCible);
+            System.out.println("Les dommages sont donc de: " + dommages);
         }
-        personnageCible.setPointsDeVie(pointsDeVieCible);
-
-        System.out.println("");
-        System.out.println(this.nom + " attaque " + personnageCible.getNom() + " avec une force de frappe de " + forceDeFrappe);
-        System.out.println(personnageCible.getNom() + " a une defense de " + valeurDefenseCible);
-        System.out.println("Les dommages sont donc de: " + dommages);
-
-        if (dommages < 0) {
-            dommages = 0;
-        }
-
-        if (pointsDeVieCible < 0) {
-            pointsDeVieCible = 0;
-        }
-        personnageCible.setPointsDeVie(pointsDeVieCible);
-
-        System.out.println("");
-        System.out.println(this.nom + " attaque " + personnageCible.getNom() + " avec une force de frappe de " + forceDeFrappe);
-        System.out.println(personnageCible.getNom() + " a une defense de " + valeurDefenseCible);
-        System.out.println("Les dommages sont donc de: " + dommages);
         // sur l'attaque, tel que montré dans l'énoncé.
     }
-    
-    @Override
-    public void setNewInitiativeRandom() {
+}
+
+@Override
+public void setNewInitiativeRandom() {
         // TODO : Modifier de façon aléatoire la valeur INI du personnage.
         Random rand2 = new Random();
         this.initiative = rand2.nextInt(31);

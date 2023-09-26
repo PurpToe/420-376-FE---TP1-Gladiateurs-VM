@@ -38,6 +38,7 @@ public class Rétiaire extends Personnage {
         int forceDeFrappe = attaqueCalcul();
         int valeurDefenseCible = personnageCible.getValeurDefense();
         int dommages = forceDeFrappe - valeurDefenseCible;
+        boolean filet = true;
 
         if (dommages < 0) {
             dommages = 0;
