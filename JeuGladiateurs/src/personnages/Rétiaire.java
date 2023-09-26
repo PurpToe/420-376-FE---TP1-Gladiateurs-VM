@@ -58,7 +58,9 @@ public class Rétiaire extends Personnage {
             }
         } else {
             System.out.println(this.nom + " ramasse son filet en profite pour attaquer.");
-
+            
+            Filet = true;
+            
             if (dommages < 0) {
                 dommages = 0;
             }
