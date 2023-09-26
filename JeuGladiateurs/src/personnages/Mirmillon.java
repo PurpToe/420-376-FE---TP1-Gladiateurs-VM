@@ -57,7 +57,7 @@ public class Mirmillon extends Personnage {
             if (dommages < 0) {
                 dommages = 0;
             }
-            
+
             if (pointsDeVieCible < 0) {
                 pointsDeVieCible = 0;
             }
@@ -67,11 +67,11 @@ public class Mirmillon extends Personnage {
             System.out.println(this.nom + " attaque " + personnageCible.getNom() + " avec une force de frappe de " + forceDeFrappe);
             System.out.println(personnageCible.getNom() + " a une defense de " + valeurDefenseCible);
             System.out.println("Les dommages sont donc de: " + dommages);
-            
+
             if (dommages < 0) {
                 dommages = 0;
             }
-            
+
             if (pointsDeVieCible < 0) {
                 pointsDeVieCible = 0;
             }
@@ -84,13 +84,13 @@ public class Mirmillon extends Personnage {
         }
         // sur l'attaque, tel que montré dans l'énoncé.
     }
-}
-
-@Override
-public void setNewInitiativeRandom() {
+    
+    @Override
+    public void setNewInitiativeRandom() {
         // TODO : Modifier de façon aléatoire la valeur INI du personnage.
         Random rand2 = new Random();
-        this.initiative = rand2.nextInt(31);
+        this.initiative = rand2.nextInt(101);
     }
-
 }
+
+
