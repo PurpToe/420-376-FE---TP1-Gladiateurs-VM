@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package personnages;
 
 import java.util.Random;
@@ -10,8 +7,9 @@ public class Mirmillon extends Personnage {
 
     protected String classe;
 
-    public Mirmillon(String classe, String nom, int attaqueMax, int defense, int pvs, int ini) {
+    public Mirmillon(String nom, int attaqueMax, int defense, int pvs, int ini) {
         super(nom, attaqueMax, defense, pvs, ini);
+        this.classe = "Mirmillon";
     }
 
     public Mirmillon() {
@@ -21,7 +19,8 @@ public class Mirmillon extends Personnage {
     public void setClasse(String classe) {
         this.classe = classe;
     }
-
+    
+    @Override
     public void afficherInfosPersonnage() {
         super.afficherInfosPersonnage();
         System.out.println("Classe :" + this.classe);
@@ -34,6 +33,7 @@ public class Mirmillon extends Personnage {
         return rand1.nextInt(this.valeurMaxAttaque + 1);
     }
 
+    @Override
     public void frapperPersonnage(Personnage personnageCible) {
         // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
         int forceDeFrappe = attaqueCalcul();
@@ -70,7 +70,8 @@ public class Mirmillon extends Personnage {
         System.out.println("Les dommages sont donc de: " + dommages);
         // sur l'attaque, tel que montré dans l'énoncé.
     }
-
+    
+    @Override
     public void setNewInitiativeRandom() {
         // TODO : Modifier de façon aléatoire la valeur INI du personnage.
         Random rand2 = new Random();
